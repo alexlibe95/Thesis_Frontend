@@ -1,0 +1,16 @@
+.img-fluid{
+  width: 100%;
+  height: auto;
+}
+
+.mdb-color.darken-3 {
+    background-color: #1E3C4C !important;
+}
+
+.indigo.darken-4 {
+    background-color: #1e3c4c !important;
+}
+
+.light-blue {
+    background-color: #1e3c4c !important;
+}
