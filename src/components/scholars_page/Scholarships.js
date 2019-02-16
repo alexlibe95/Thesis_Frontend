@@ -182,7 +182,7 @@ export default class Scholarships extends Component{
 
             <div className="custom-control custom-checkbox">
                 <input type="checkbox" className="custom-control-input" id="1" name="indigent" onChange={ this.handleClick }></input>
-                <label className="custom-control-label" htmlFor="1">Αντιμετωπίζεις Οικονομικό Πρόβλημα;</label>
+                <label className="custom-control-label" htmlFor="1">Χαμηλό Εισόδημα</label>
             </div>
             <br />
 

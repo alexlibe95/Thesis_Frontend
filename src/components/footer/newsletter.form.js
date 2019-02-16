@@ -67,7 +67,7 @@ export default class NewsletterForm extends React.Component {
               return (
                 <div>
                 <form name="form"  onSubmit={this.handleSubmit}>
-                      <p className="h5 text-center">Εγγραφείτε στο Newsletter μας</p>
+                      <p className="h5 text-center">Κάνε εγγραφή στο Newsletter μας</p>
                       <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
                         <input
                           name="username"

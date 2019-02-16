@@ -90,7 +90,7 @@ export default class ScholarsTable extends Component{
 
 
                 if (!this.props.submitted){
-                  return (<div>Πατηστε για αναζητηση</div>)
+                  return (<div>Επιλέξτε τα κατάλληλα κριτήρια για να ανακαλύψετε τις υποτροφίες που σας ταιριάζουν.</div>)
                 }
                 else if(this.props.submitted && (this.state.isLoaded !== this.props.loaded)){
                   this.getProgrammes();
