@@ -30,7 +30,7 @@ var columns=[{
         sort: 'asc'
       },
       {
-        label: 'Λήξη Αιτήσεων',
+        label: 'Προθεσμία',
         field: 'date',
         sort: 'asc'
       },
@@ -109,7 +109,7 @@ export default class ScholarsTable extends Component{
                       "title":this.state.Scholars[i].title,
                       "sectors":this.state.Scholars[i].sector,
                       "level":this.state.Scholars[i].level,
-                      "prize":this.state.Scholars[i].euro + "$",
+                      "prize":this.state.Scholars[i].euro + "€",
                       "date":this.state.Scholars[i].date_expire,
                       "open":<OpenModal Scholar={this.state.Scholars[i]} />
                     })
