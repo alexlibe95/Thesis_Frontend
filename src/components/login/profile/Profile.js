@@ -107,7 +107,7 @@ export default class Profile extends Component {
             <div className="container-fluid text-center p-5">
               <div className="col-md-12 ">
 
-                  <h1>Hi {user.firstName}!</h1>
+                  <h1>{user.instName}</h1>
 
 
                   {!this.state.isLoaded &&
@@ -136,7 +136,7 @@ export default class Profile extends Component {
 
         return (
           <div className="container-fluid text-center p-5">
-            <h1>Hi {user.firstName}!</h1>
+            <h1>{user.instName}</h1>
             <div className="row">
               <div className="col-md-2">
                   <AddModal username={user.username} action={this.handlerRefresh}/>

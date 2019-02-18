@@ -56,7 +56,7 @@ export default class AddModal extends Component {
 
       const { title, sector, level, euro, origin, duration, age_from, age_until, indigent, comment, date_expire, link } = this.state;
 
-      if (!(title && sector && level && euro && age_from && age_until && date_expire && link)) {
+      if (!(title && sector && level && euro && age_from && age_until && date_expire )) {
           return;
       }
 
