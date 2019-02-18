@@ -96,7 +96,7 @@ export default class AddModal extends Component {
 
     return (
       <div>
-        <MDBBtn color="green" size="m" onClick={this.toggle(1)}>+Add Scholarship</MDBBtn>
+        <MDBBtn color="green" size="m" onClick={this.toggle(1)}>Προσθηκη υποτροφιας</MDBBtn>
 
         <MDBModal isOpen={this.state.modal1} toggle={this.toggle(1)} centered size="lg">
         <form onSubmit={this.onSubmit}>

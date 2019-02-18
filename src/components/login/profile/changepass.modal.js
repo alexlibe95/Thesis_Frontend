@@ -100,7 +100,7 @@ export default class ChangePassModal extends Component {
 
     return (
       <div>
-        <MDBBtn  size="m" onClick={this.toggle(1)}>Change Password</MDBBtn>
+        <MDBBtn  size="m" onClick={this.toggle(1)}>Αλλαγη Κωδικου Προσβασης</MDBBtn>
 
         <MDBModal isOpen={this.state.modal1} toggle={this.toggle(1)} centered size="lg">
         <form onSubmit={this.onSubmit}>

@@ -17,31 +17,31 @@ var columns=[{
         width: 10
       },
       {
-        label: 'Title',
+        label: 'Τίτλος Υποτροφίας',
         field: 'titlesd',
         sort: 'asc',
         width: 10
       },
       {
-        label: 'Sectors',
+        label: 'Πεδίο',
         field: 'institution',
         sort: 'asc',
         width: 10
       },
       {
-        label: 'Level',
+        label: 'Επίπεδο Σπουδών',
         field: 'epipedo',
         sort: 'asc',
         width: 10
       },
       {
-        label: 'Edit',
+        label: 'Επεξεργασία',
         field: 'epejergasia',
         sort: 'asc',
         width: 10
       },
       {
-        label: 'Delete',
+        label: 'Διαγραφή',
         field: 'button',
         sort: 'asc',
         width: 10
