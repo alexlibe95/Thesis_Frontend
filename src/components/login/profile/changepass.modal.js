@@ -15,9 +15,7 @@ export default class ChangePassModal extends Component {
         renewpass:'',
         error:'',
         error1:'',
-
         submitted: false,
-
         modal1: false,
         modal2: false
       };
@@ -55,8 +53,6 @@ export default class ChangePassModal extends Component {
 
       userService.getsalt(username).then(res=>{
         var oldpasswordData = this.sha512(oldpass,res[0].salt);
-
-
         userService.login(username, oldpasswordData.passwordHash).then(user => {
             var salt = this.genRandomString(16);
             var newpasswordData = this.sha512(newpass, salt);
@@ -103,101 +99,97 @@ export default class ChangePassModal extends Component {
         <MDBBtn  size="m" onClick={this.toggle(1)}>Αλλαγη Κωδικου Προσβασης</MDBBtn>
 
         <MDBModal isOpen={this.state.modal1} toggle={this.toggle(1)} centered size="lg">
-        <form onSubmit={this.onSubmit}>
-        <MDBModalHeader toggle={this.toggle(1)}>Αλλαγή Κωδικού Πρόσβασης</MDBModalHeader>
-        <MDBModalBody>
+          <form onSubmit={this.onSubmit}>
+            <MDBModalHeader toggle={this.toggle(1)}>Αλλαγή Κωδικού Πρόσβασης</MDBModalHeader>
+            <MDBModalBody>
 
-        <MDBContainer>
-          <MDBRow>
-            <MDBCol md="12">
-
-
-                <label  className="grey-text">
-                  Old Password
-                </label>
-                <div className={'form-group' + (submitted && !oldpass ? ' has-error' : '')}>
-                <input
-                  type="password"
-                  name="oldpass"
-                  className="form-control"
-                  value={oldpass}
-                  onChange={this.onChange}
-                  autoComplete ="on"
-                />
-                {submitted && !oldpass &&
-                    <div className="help-block red-text"  >Password is required</div>
-                }
-                {submitted && oldpass &&
-                  <small className="help-block white-text ">1</small>
-                }
-                {error &&
-                    <div className={'alert alert-danger'}>{error}</div>
-                }
-                </div>
-                <br />
+              <MDBContainer>
+                <MDBRow>
+                  <MDBCol md="12">
 
 
-                <label  className="grey-text">
-                  New Password
-                </label>
-                <div className={'form-group' + (submitted && !newpass ? ' has-error' : '')}>
-                <input
-                  type="password"
-                  name="newpass"
-                  value={newpass}
-                  className="form-control"
-                  onChange={this.onChange}
-                  autoComplete ="on"
-                />
-                {submitted && !newpass &&
-                    <div className="help-block red-text"  >New Password is required</div>
-                }
-                {submitted && newpass===oldpass &&
-                    <div className="help-block red-text"  >New Password can not be the same!</div>
-                }
-                {true &&
-                  <small className="help-block white-text ">1</small>
-                }
-                {error1 &&
-                    <div className={'alert alert-danger'}>{error1}</div>
-                }
-                </div>
-                <br />
+                      <label  className="grey-text">
+                        Old Password
+                      </label>
+                      <div className={'form-group' + (submitted && !oldpass ? ' has-error' : '')}>
+                          <input
+                            type="password"
+                            name="oldpass"
+                            className="form-control"
+                            value={oldpass}
+                            onChange={this.onChange}
+                            autoComplete ="on"
+                          />
+                          {submitted && !oldpass &&
+                              <div className="help-block red-text"  >Password is required</div>
+                          }
+                          {submitted && oldpass &&
+                            <small className="help-block white-text ">1</small>
+                          }
+                          {error &&
+                              <div className={'alert alert-danger'}>{error}</div>
+                          }
+                      </div>
+                      <br />
 
+                      <label  className="grey-text">
+                        New Password
+                      </label>
+                      <div className={'form-group' + (submitted && !newpass ? ' has-error' : '')}>
+                          <input
+                            type="password"
+                            name="newpass"
+                            value={newpass}
+                            className="form-control"
+                            onChange={this.onChange}
+                            autoComplete ="on"
+                          />
+                          {submitted && !newpass &&
+                              <div className="help-block red-text"  >New Password is required</div>
+                          }
+                          {submitted && newpass===oldpass &&
+                              <div className="help-block red-text"  >New Password can not be the same!</div>
+                          }
+                          {true &&
+                            <small className="help-block white-text ">1</small>
+                          }
+                          {error1 &&
+                              <div className={'alert alert-danger'}>{error1}</div>
+                          }
+                      </div>
+                      <br />
 
-                <label className="grey-text">
-                  Re-type New Password
-                </label>
-                <div className={'form-group' + (submitted && !renewpass ? ' has-error' : '')}>
-                <input
-                  type="password"
-                  name="renewpass"
-                  value={renewpass}
-                  className="form-control"
-                  onChange={this.onChange}
-                  autoComplete ="on"
-                />
-                {submitted && !renewpass &&
-                    <div className="help-block red-text"  >Re-typing New Password is required<br/></div>
-                }
-                {submitted && renewpass!==newpass &&
-                    <div className="help-block red-text"  >New Passwords do not match!<br/></div>
-                }
-                </div>
-                <br />
+                      <label className="grey-text">
+                        Re-type New Password
+                      </label>
+                      <div className={'form-group' + (submitted && !renewpass ? ' has-error' : '')}>
+                          <input
+                            type="password"
+                            name="renewpass"
+                            value={renewpass}
+                            className="form-control"
+                            onChange={this.onChange}
+                            autoComplete ="on"
+                          />
+                          {submitted && !renewpass &&
+                              <div className="help-block red-text"  >Re-typing New Password is required<br/></div>
+                          }
+                          {submitted && renewpass!==newpass &&
+                              <div className="help-block red-text"  >New Passwords do not match!<br/></div>
+                          }
+                      </div>
+                      <br />
 
+                  </MDBCol>
+                </MDBRow>
+              </MDBContainer>
+            </MDBModalBody>
 
-
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-        </MDBModalBody>
-
-        <MDBModalFooter>
-        <MDBBtn color="red" onClick={this.toggle(1)}>Close</MDBBtn>
-        <MDBBtn color="blue" type="submit">Save changes</MDBBtn>
-        </MDBModalFooter>
-        </form>
+            <MDBModalFooter>
+              <MDBBtn color="red" onClick={this.toggle(1)}>Close</MDBBtn>
+              <MDBBtn color="blue" type="submit">Save changes</MDBBtn>
+            </MDBModalFooter>
+          </form>
         </MDBModal>
 
         <MDBContainer>
@@ -213,12 +205,5 @@ export default class ChangePassModal extends Component {
           </MDBModal>
         </MDBContainer>
       </div>
-
-
-
-
-
     )}
-
-
 }

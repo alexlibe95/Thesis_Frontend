@@ -20,5 +20,4 @@ export default class ContactModal extends Component {
       </MDBModal>
     </MDBContainer>
     )}
-
   }

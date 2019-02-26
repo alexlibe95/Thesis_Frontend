@@ -21,7 +21,7 @@ function store(username, email)  {
 function handleResponse(response) {
         if (!response.ok) {
             return false
-        }else{
+        } else {
             return true;
         }
 }

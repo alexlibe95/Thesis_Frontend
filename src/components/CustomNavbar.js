@@ -31,12 +31,10 @@ reload(){
         return (
 
             <Router>
-
                 <Navbar expand="md" scrolling>
 
                     <NavbarBrand >
-                      <NavLink    onClick={ e => this.props.history.push("/")} to="/"><img src="assets/logo_3.jpg"  alt = "logo" height="100" /></NavLink >
-
+                      <NavLink onClick={ e => this.props.history.push("/")} to="/"><img src="assets/logo_3.jpg"  alt = "logo" height="100" /></NavLink >
                     </NavbarBrand>
 
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
@@ -49,10 +47,8 @@ reload(){
                           <NavItem>
                               <NavLink  onClick={ e => this.props.history.push("/scholarships")} to="/scholarships">Αναζήτηση Υποτροφιών</NavLink>
                           </NavItem>
-
                           <NavItem>
                             <NavLink  onClick={ e => this.props.history.push("/institutions")} to="/institutions">Ιδρύματα και Φορείς</NavLink>
-
                           </NavItem>
                           <NavItem>
                               <NavLink onClick={ e => this.props.history.push("/about_us")} to="/about_us">Σχετικά με εμάς</NavLink>
@@ -63,8 +59,6 @@ reload(){
                           <NavItem>
                               <NavLink onClick={ e => this.props.history.push("/contact")} to="/contact">Επικοινωνία</NavLink>
                           </NavItem>
-
-
                         </NavbarNav>
                         {(localStorage.getItem('user')  !== null ) ?
                         <NavbarNav right>
@@ -80,12 +74,9 @@ reload(){
                               <NavLink onClick={ e => this.props.history.push("/login")} to="/login">Σύνδεση Φορέα</NavLink>
                           </NavItem>
                         </NavbarNav>}
-
                     </Collapse>
                 </Navbar>
-
             </Router>
-
         );
     }
 }

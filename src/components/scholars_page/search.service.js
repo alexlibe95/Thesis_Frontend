@@ -33,7 +33,6 @@ function getSchols(sector, level, euro, origin, age, indigent, active)  {
         });
 }
 
-
 function handleResponse(response) {
     return response.text().then(text => {
         const data = text && JSON.parse(text);
@@ -44,7 +43,6 @@ function handleResponse(response) {
             const error = (data && data.message) || response.statusText;
             return Promise.reject(error);
         }
-
         return data;
     });
 }

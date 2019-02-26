@@ -36,16 +36,12 @@ export default class NewsletterForm extends React.Component {
 
         handleSubmit(e) {
             e.preventDefault();
-
-
             this.setState({ submitted: true });
             const { username, email} = this.state; //+value returnUrl
             // stop here if form is invalid
             if (!(username && email)) {
                 return;
             }
-
-
             newsletterService.store(username, email)
               .then(
                   success => {
@@ -59,7 +55,7 @@ export default class NewsletterForm extends React.Component {
                   },
                   error => this.setState({ error})
               );
-        }
+          }
 
               render() {
 
@@ -105,8 +101,7 @@ export default class NewsletterForm extends React.Component {
                     </form>
 
                     <NewsletterModal open={modal} action={this.handler}/>
+
                     </div>
-
               )}
-
             }

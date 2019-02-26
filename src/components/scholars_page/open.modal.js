@@ -55,9 +55,6 @@ export default class OpenModal extends Component {
           <MDBModalHeader toggle={this.toggle(1)}>Στοιχεία Υποτροφίας</MDBModalHeader>
             <MDBModalBody>
               <MDBContainer className="text-left black-text h6 p-5">
-
-
-
                     <MDBRow >
                       <MDBCol md="6">
                         ΤΙΤΛΟΣ
@@ -146,7 +143,6 @@ export default class OpenModal extends Component {
                       <p>Περισσότερες πληροφορίες</p>
                     </MDBRow>
 
-
                     <MDBRow >
                       <MDBCol md="6">
                         Link
@@ -175,12 +171,6 @@ export default class OpenModal extends Component {
                         {date_expire}
                       </MDBCol>
                     </MDBRow>
-
-
-
-
-
-
             </MDBContainer>
           </MDBModalBody>
 
@@ -190,12 +180,5 @@ export default class OpenModal extends Component {
         </MDBModal>
 
       </div>
-
-
-
-
-
     )}
-
-
 }

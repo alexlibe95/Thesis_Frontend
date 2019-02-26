@@ -20,5 +20,4 @@ export default class NewsletterModal extends Component {
       </MDBModal>
     </MDBContainer>
     )}
-
   }

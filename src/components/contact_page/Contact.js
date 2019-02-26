@@ -47,7 +47,6 @@ export default class Contact extends React.Component{
             return;
         }
 
-
         contactService.sendEmail(username, email, subject, text)
           .then(
               success => {
@@ -75,72 +74,71 @@ export default class Contact extends React.Component{
               <div className="grey-text">
 
                 <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
-                <MDBInput
-                  label="Όνομα"
-                  icon="user"
-                  group
-                  type="text"
-                  name="username"
-                  value={username}
-                  onChange={this.handleChange}
-                />
-                {submitted && !username &&
-                  <div className="text-center">
-                    <small className="help-block red-text">Name is required</small>
-                  </div>
-                }
+                  <MDBInput
+                    label="Όνομα"
+                    icon="user"
+                    group
+                    type="text"
+                    name="username"
+                    value={username}
+                    onChange={this.handleChange}
+                  />
+                  {submitted && !username &&
+                    <div className="text-center">
+                      <small className="help-block red-text">Name is required</small>
+                    </div>
+                  }
                 </div>
 
                 <div className={'form-group' + (submitted && !email ? ' has-error' : '')}>
-                <MDBInput
-                  label="Email"
-                  icon="envelope"
-                  group
-                  type="email"
-                  name="email"
-                  value={email}
-                  onChange={this.handleChange}
-                />
-                {submitted && !email &&
-                  <div className="text-center">
-                    <small className="help-block red-text">Email is required</small>
-                  </div>
-                }
+                  <MDBInput
+                    label="Email"
+                    icon="envelope"
+                    group
+                    type="email"
+                    name="email"
+                    value={email}
+                    onChange={this.handleChange}
+                  />
+                  {submitted && !email &&
+                    <div className="text-center">
+                      <small className="help-block red-text">Email is required</small>
+                    </div>
+                  }
                 </div>
 
                 <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
-                <MDBInput
-                  label="Θέμα"
-                  icon="tag"
-                  group
-                  type="text"
-                  name="subject"
-                  value={subject}
-                  onChange={this.handleChange}
-                />
-                {submitted && !subject &&
-                  <div className="text-center">
-                    <small className="help-block red-text text-center">Subject is required</small>
-                  </div>
-                }
+                  <MDBInput
+                    label="Θέμα"
+                    icon="tag"
+                    group
+                    type="text"
+                    name="subject"
+                    value={subject}
+                    onChange={this.handleChange}
+                  />
+                  {submitted && !subject &&
+                    <div className="text-center">
+                      <small className="help-block red-text text-center">Subject is required</small>
+                    </div>
+                  }
                 </div>
 
                 <div className={'form-group' + (submitted && !text ? ' has-error' : '')}>
-                <MDBInput
-                  type="textarea"
-                  rows="2"
-                  label="Κείμενο"
-                  icon="pencil-alt"
-                  name="text"
-                  value={text}
-                  onChange={this.handleChange}
-                />{submitted && !text &&
-                  <div className="text-center">
-                    <small className="help-block red-text text-center">Text is required</small>
-                  </div>
-                }
+                  <MDBInput
+                    type="textarea"
+                    rows="2"
+                    label="Κείμενο"
+                    icon="pencil-alt"
+                    name="text"
+                    value={text}
+                    onChange={this.handleChange}
+                  />{submitted && !text &&
+                    <div className="text-center">
+                      <small className="help-block red-text text-center">Text is required</small>
+                    </div>
+                  }
                 </div>
-
 
               </div>
               <div className="text-center">
@@ -150,7 +148,6 @@ export default class Contact extends React.Component{
               </div>
             </form>
           </MDBCol>
-
 
         </MDBRow>
         <ContactModal open={modal} action={this.handler}/>

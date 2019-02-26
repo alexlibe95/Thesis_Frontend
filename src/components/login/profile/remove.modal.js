@@ -16,8 +16,6 @@ export default class RemoveModal extends Component {
         this.setState({
           [modalNumber]: !this.state[modalNumber]
         });
-
-
     }
 
     handleRemove({currentTarget}) {
@@ -37,8 +35,6 @@ export default class RemoveModal extends Component {
                     }
                 }
             );
-
-
     }
 
   render() {
@@ -57,5 +53,4 @@ export default class RemoveModal extends Component {
       </MDBModal>
     </MDBContainer>
     )}
-
   }

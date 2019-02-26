@@ -23,10 +23,6 @@ export default class Scholarships extends Component{
     this.handleClick = this.handleClick.bind(this);
     this.handleClick1 = this.handleClick1.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-
-
-
-
   }
 
   onChange = (e) => {
@@ -41,16 +37,12 @@ export default class Scholarships extends Component{
     this.setState({active: !this.state.active});
   }
 
-
-
   onSubmit= (e) => {
       e.preventDefault();
 
       this.setState({ isSubmitted: true });
       this.setState({ isLoaded: this.state.isLoaded +1 });
       console.log(this.state.isLoaded)
-
-
   }
 
 
@@ -179,7 +171,6 @@ export default class Scholarships extends Component{
               />
               <br/>
 
-
             <div className="custom-control custom-checkbox">
                 <input type="checkbox" className="custom-control-input" id="1" name="indigent" onChange={ this.handleClick }></input>
                 <label className="custom-control-label" htmlFor="1">Χαμηλό Εισόδημα</label>
@@ -199,15 +190,11 @@ export default class Scholarships extends Component{
           </Jumbotron>
         </div>
 
-
         <div className = "col-md-9"  style = { {  marginTop: '1.2rem'}}>
           <ScholarsTable sector={sector} level={level} euro={euro} origin={origin} age={age} indigent={indigent} active={active} submitted={isSubmitted} loaded={isLoaded} />
         </div>
 
      </div>
-
-
-
     );
   }
 }

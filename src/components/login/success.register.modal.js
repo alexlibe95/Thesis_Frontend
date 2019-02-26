@@ -15,12 +15,10 @@ class RegisterModal1 extends Component {
         </MDBModalBody>
         <MDBModalFooter>
           <MDBBtn color="green" onClick={e => this.props.history.push("/")} to="/">Ενταξει</MDBBtn>
-
         </MDBModalFooter>
       </MDBModal>
     </MDBContainer>
     )}
-
   }
 
 export default withRouter(RegisterModal1);

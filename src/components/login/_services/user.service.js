@@ -1,5 +1,4 @@
 import {config} from '../../config/config.js';
-//import { authHeader } from '../_helpers/auth-header.js';
 
 export const userService = {
     login,
@@ -15,7 +14,6 @@ function login(username, passwordHash)  {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, passwordHash })
     };
-
     return fetch(`${config.apiUrl}/auth`, requestOptions)
         .then(handleResponse)
         .then(user => {
@@ -26,7 +24,6 @@ function login(username, passwordHash)  {
                 user.authdata = window.btoa(username + ':' + passwordHash);
                 localStorage.setItem('user', JSON.stringify(user));
             }
-
             return user;
         });
 }
@@ -37,7 +34,6 @@ function register(instName, instLink, firstName, lastName, username, passwordHas
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ instName, instLink, firstName, lastName, username, passwordHash, salt })
     };
-
     return fetch(`${config.apiUrl}/register`, requestOptions)
         .then(handleResponseRegister)
         .then(success => {
@@ -51,7 +47,6 @@ function getsalt(username)  {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username })
     };
-
     return fetch(`${config.apiUrl}/salt`, requestOptions)
       .then(response=>response.json())
       .then(response=> {
@@ -65,7 +60,6 @@ function changepass(username, passwordHash, salt)  {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({username, passwordHash, salt})
     };
-
     return fetch(`${config.apiUrl}/changepass`, requestOptions)
         .then(handleResponse)
         .then(success => {
@@ -97,11 +91,9 @@ function handleResponse(response) {
                 logout();
                 window.location.reload(true);
             }
-
             const error = (data && data.message) || response.statusText;
             return Promise.reject(error);
         }
-
         return data;
     });
 }

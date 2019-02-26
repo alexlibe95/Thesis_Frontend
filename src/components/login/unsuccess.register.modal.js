@@ -15,10 +15,8 @@ export default class RegisterModal2 extends Component {
         </MDBModalBody>
         <MDBModalFooter>
           <MDBBtn color="red" onClick={this.props.action}>Ενταξει</MDBBtn>
-
         </MDBModalFooter>
       </MDBModal>
     </MDBContainer>
     )}
-
   }

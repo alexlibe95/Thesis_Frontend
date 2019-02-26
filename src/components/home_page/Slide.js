@@ -17,7 +17,6 @@ export default class CarouselPage extends Component {
                 <img className="d-block w-100" src="assets/111.png" alt="First slide" />
                 <Mask overlay="black-slight"></Mask>
               </View>
-
             </CarouselItem>
             <CarouselItem itemId="2">
               <View>
@@ -27,7 +26,6 @@ export default class CarouselPage extends Component {
             </CarouselItem>
           </CarouselInner>
         </Carousel>
-
     );
   }
 }

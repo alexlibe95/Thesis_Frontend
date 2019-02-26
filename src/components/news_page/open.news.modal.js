@@ -35,12 +35,5 @@ export default class OpenModal extends Component {
 
         </MDBModal>
       </div>
-
-
-
-
-
     )}
-
-
 }

@@ -30,7 +30,6 @@ var text4_2="Ο κατωτέρω πίνακας αναρτάται για ενη
 
 export default class LatestNews extends React.Component{
 
-
   render() {
     return (
       <Card  style = { {   height:'100%' , marginTop: '1rem'} } >

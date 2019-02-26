@@ -24,8 +24,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div>
-
+       <div>
           <img src = "assets/banner-3.jpg" className = "img-fluid" alt = "Responsive" />
 
           <Jumbotron  style = { {  marginTop: '1rem'}} className="text-center">
@@ -37,7 +36,6 @@ class Home extends Component {
           </Jumbotron>
 
           <div className = "row" style = { {  marginTop: '-1rem'}}>
-
               <div className = "col-md-4">
                 <Card  style = { {   height:'100%' } } >
                   <CardHeader color = "#1c2a48 mdb-color darken-3" tag = "h3" > Αναζήτηση< /CardHeader>
@@ -48,21 +46,15 @@ class Home extends Component {
                   </CardBody>
                 </Card>
               </div>
-
               <div className = "col-md-8"  >
                 <Slide />
               </div>
-
           </div>
-
           <div className = "row" style = { {  marginTop: '1rem'}}>
-
-              <div className="col-md">
-                <LatestNews />
-              </div>
-
+             <div className="col-md">
+               <LatestNews />
+             </div>
           </div>
-
       </div>
     );
   }

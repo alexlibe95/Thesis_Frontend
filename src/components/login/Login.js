@@ -43,8 +43,6 @@ var crypto = require('crypto');
         }
 
         this.setState({ loading: true });
-
-
         userService.getsalt(username).then(res=>{
           var passwordData = this.sha512(password,res[0].salt);
           userService.login(username, passwordData.passwordHash)
@@ -56,9 +54,6 @@ var crypto = require('crypto');
                   error => this.setState({ error, loading: false })
               );
         })
-
-
-
     }
 
     sha512(password, salt){
@@ -106,9 +101,6 @@ var crypto = require('crypto');
                     Επιθυμείτε να δημιουργήσετε λογαριασμό; <MDBBtn color="green" size="sm" onClick={ e => this.props.history.push("/register")} to="/register"><b> Register</b></MDBBtn>
                 </small>
             </div>
-
-
-
         );
     }
 }
