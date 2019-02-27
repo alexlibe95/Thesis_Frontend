@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 import { MDBDataTable } from 'mdbreact';
 import {config} from '../../config/config.js';
 import AddModal from './add.modal.js';
@@ -89,7 +88,6 @@ export default class Profile extends Component {
         }catch(e){
         }
       }
-
 
 
     render() {

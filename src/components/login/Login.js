@@ -1,14 +1,11 @@
 import React, {Component} from 'react';
 import {withRouter} from "react-router-dom";
 import { MDBBtn } from 'mdbreact';
-
-
-
 import { userService } from './_services/user.service.js';
 
 var crypto = require('crypto');
 
- class LoginPage extends Component {
+class LoginPage extends Component {
     constructor(props) {
         super(props);
 
@@ -35,7 +32,7 @@ var crypto = require('crypto');
         e.preventDefault();
 
         this.setState({ submitted: true });
-        const { username, password} = this.state; //+value returnUrl
+        const { username, password} = this.state; 
 
         // stop here if form is invalid
         if (!(username && password)) {
